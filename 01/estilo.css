@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6bd20;
+    font-family: system-ui;
+    
+}
+#message {
+    font-size: 100px;
+    color: #ff0000;
+}
