@@ -11,17 +11,12 @@ const setImage = formData => {
     var binary = formData.get('image');
     var domStr = URL.createObjectURL(binary);
     image.setAttribute('src',domStr);
-    // console.log(image);
 }
 
-file.addEventListener( 'change', e => {
-    const f = new FormData(form);
-    setImage(f);
-} );
+file.addEventListener( 'change', e => setImage( new FormData(form) ) );
 
 form.addEventListener('submit', event => {    
     event.preventDefault();
-
     // FormData(event.currentTarget); De forma didactica para obtener el form
     var formData = new FormData(event.currentTarget);
 
@@ -29,6 +24,6 @@ form.addEventListener('submit', event => {
     // console.log( 'Mostrando...'+formData.get('texto') );
 
     renderUsername(formData);
-    // setImage(formData);
-    // Luego hacemo el Fetch
+    // Luego hacemo el Fetch para guardar en DB
+    console.log('Enviar...');
 });
