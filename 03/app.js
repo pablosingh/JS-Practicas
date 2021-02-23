@@ -6,14 +6,14 @@ console.log('Funcionando...');
 const user = document.querySelector('#user');
 const pass = document.querySelector('#pass');
 
-user.addEventListener('focus', focus)
+user.addEventListener('focus',focus);
 user.addEventListener('blur',blur);
 
 pass.addEventListener('focus',focus);
 pass.addEventListener('blur',blur);
 
 overlay.addEventListener('click', (event) => {
-    console.log(event); // Mostrando
+    // console.log(event); // Mostrando
     overlay.classList.remove('is-active'); // Desactivar la clase 'is-active'
     const elemPuntero = document.elementFromPoint( event.clientX, event.clientY ) ; // Buscar a q elemento se dio click
     if ( elemPuntero.tagName === 'INPUT' )
